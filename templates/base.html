@@ -1,101 +1,138 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Cisco Sports Center — Authentic Football Jerseys in Uganda{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Shop authentic club and national team jerseys in Uganda. Home, away, and retro kits with fast delivery across Kampala and beyond.{% endblock %}">
-    <meta name="keywords" content="football jerseys Uganda, buy jerseys Kampala, club jerseys, national team jerseys, Cisco Sports Center">
-    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+{% block title %}{{ jersey.name }} — {{ jersey.team.name }} Jersey | Cisco Sports Center{% endblock %}
+{% block meta_description %}Buy the {{ jersey.name }} for UGX {{ jersey.price }}. Authentic {{ jersey.team.name }} jersey, sizes available, fast delivery across Uganda.{% endblock %}
+{% block og_image %}{% if jersey.image %}<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ jersey.image.url }}">{% endif %}{% endblock %}
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Cisco Sports Center">
-    <meta property="og:title" content="{% block og_title %}Cisco Sports Center — Authentic Football Jerseys in Uganda{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}Shop authentic club and national team jerseys in Uganda. Home, away, and retro kits with fast delivery across Kampala and beyond.{% endblock %}">
-    <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    {% block og_image %}{% endblock %}
-
-    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
-    <script src="{% static 'store/js/theme.js' %}"></script>
-</head>
-<body>
-   <header class="site-header">
-    <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-    </button>
-
-    <a class="brand" href="{% url 'store:jersey_list' %}">CISCO<span>SPORTS</span>CENTER</a>
-
-    <nav class="mega-nav" id="megaNav">
-        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
-        <ul class="mega-nav-list">
-            {% for cat in nav_menu %}
-            <li class="mega-nav-item">
-                <button type="button" class="mega-nav-trigger" aria-expanded="false">
-                    {{ cat.label }}
-                    <span class="chevron mega-trigger-chevron">&rsaquo;</span>
-                </button>
-                <div class="mega-panel">
-                    <div class="nav-screen nav-screen-leagues" data-screen="leagues">
-                        {% for group_name, teams in cat.groups.items %}
-                        <button type="button" class="league-item" data-league-index="{{ forloop.counter0 }}">
-                            {{ group_name }}
-                            <span class="chevron">&rsaquo;</span>
-                        </button>
-                        {% endfor %}
-                    </div>
-                    <div class="nav-screen nav-screen-teams" data-screen="teams" hidden>
-                        <button type="button" class="team-back">&lsaquo; All leagues</button>
-                        {% for group_name, teams in cat.groups.items %}
-                        <div class="team-group" data-league-index="{{ forloop.counter0 }}" hidden>
-                            <p class="mega-col-title">{{ group_name }}</p>
-                            <ul class="mega-col-list">
-                                {% for team in teams %}
-                                <li><a href="{% url 'store:team_detail' team.slug %}">{{ team.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
-
-        <div class="mobile-nav-actions">
-            <a href="{% url 'store:order_track' %}">Track order</a>
+{% block content %}
+<section class="product-page">
+    <div class="product-gallery">
+        <div class="product-image" id="mainImage">
+            {% if jersey.image %}
+                <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}" id="mainImageTag">
+            {% else %}
+                <span class="placeholder-number">{{ jersey.team.name|slice:":1" }}</span>
+            {% endif %}
         </div>
-    </nav>
 
-    <form class="search-form" action="{% url 'store:jersey_list' %}" method="get">
-        <input type="text" name="q" placeholder="Search jerseys, teams..." value="{{ request.GET.q }}">
-    </form>
+        {% if jersey.images.all %}
+        <div class="gallery-thumbs">
+            {% if jersey.image %}
+            <button type="button" class="thumb-item active" data-full="{{ jersey.image.url }}">
+                <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}">
+            </button>
+            {% endif %}
+            {% for extra in jersey.images.all %}
+            <button type="button" class="thumb-item{% if not jersey.image and forloop.first %} active{% endif %}" data-full="{{ extra.image.url }}">
+                <img src="{{ extra.image.url }}" alt="{{ jersey.name }} view">
+            </button>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 
-    <div class="nav-actions">
-        <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
-    {% if user.is_authenticated %}
-        <a href="{% url 'store:account_view' %}" class="account-link">Account</a>
-        <a href="{% url 'store:account_logout' %}" class="account-link">Logout</a>
-    {% else %}
-        <a href="{% url 'store:account_login' %}" class="account-link">Account</a>
-    {% endif %}
-    <a href="{% url 'store:order_track' %}" class="track-link">Track order</a>
-    <a href="{% url 'store:cart_view' %}" class="cart-link">
-        Cart{% if cart_count %} <span class="cart-badge">{{ cart_count }}</span>{% endif %}
-    </a>
-</div>
-</header>
+    <div class="product-info buy-box">
+        <p class="team-tag">{{ jersey.team.name }} &middot; {{ jersey.get_kind_display }} &middot; {{ jersey.season }}</p>
+        <h1>{{ jersey.name }}</h1>
+        <p class="price">UGX {{ jersey.price }}</p>
 
-    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+        {% if jersey.description %}
+            <p class="description">{{ jersey.description }}</p>
+        {% endif %}
 
-    {% block content %}{% endblock %}
+        <hr class="seam">
 
-    <footer class="site-footer">
-        <span>&copy; {% now "Y" %} Cisco Sport</span>
-        <span>Kampala, Uganda</span>
-    </footer>
+        <form method="post" action="{% url 'store:cart_add' %}" id="addToCartForm">
+            {% csrf_token %}
+            <input type="hidden" name="variant_id" id="variantIdInput" value="">
 
-    <script src="{% static 'store/js/nav.js' %}"></script>
-</body>
-</html>
+            <p class="size-label">Select size</p>
+            <div class="sizes" id="sizeOptions">
+                {% for variant in jersey.variants.all %}
+                    <button type="button"
+                            class="size-option"
+                            data-id="{{ variant.id }}"
+                            data-stock="{{ variant.stock }}"
+                            {% if variant.stock <= 0 %}disabled{% endif %}>
+                        {{ variant.size }}
+                    </button>
+                {% empty %}
+                    <span class="size-option" style="cursor:default;">No sizes added yet</span>
+                {% endfor %}
+            </div>
+
+            <p class="size-label">Quantity</p>
+            <div class="qty-stepper">
+                <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" name="quantity" id="qtyInput" value="1" min="1" max="1" readonly>
+                <button type="button" id="qtyPlus" aria-label="Increase quantity">&plus;</button>
+            </div>
+
+            {% if jersey.total_stock > 0 %}
+                <button type="submit" class="btn btn-primary btn-add-cart" id="addToCart" disabled>Select a size</button>
+            {% else %}
+                <button type="button" class="btn btn-primary btn-add-cart" disabled>Out of stock</button>
+            {% endif %}
+        </form>
+
+        <table class="specs-table">
+            <tbody>
+                <tr><th>Team</th><td>{{ jersey.team.name }}</td></tr>
+                <tr><th>Type</th><td>{{ jersey.get_kind_display }}</td></tr>
+                <tr><th>Season</th><td>{{ jersey.season }}</td></tr>
+                <tr><th>Availability</th><td>{% if jersey.total_stock > 0 %}{{ jersey.total_stock }} in stock{% else %}Out of stock{% endif %}</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script>
+(function () {
+    var thumbs = document.querySelectorAll('.thumb-item');
+    var mainImg = document.getElementById('mainImageTag');
+    thumbs.forEach(function (t) {
+        t.addEventListener('click', function () {
+            thumbs.forEach(function (x) { x.classList.remove('active'); });
+            t.classList.add('active');
+            if (mainImg) mainImg.src = t.dataset.full;
+        });
+    });
+
+    var sizeOptions = document.querySelectorAll('.size-option:not([disabled])');
+    var qtyInput = document.getElementById('qtyInput');
+    var qtyMinus = document.getElementById('qtyMinus');
+    var qtyPlus = document.getElementById('qtyPlus');
+    var addToCart = document.getElementById('addToCart');
+    var variantIdInput = document.getElementById('variantIdInput');
+    var selectedStock = 0;
+
+    sizeOptions.forEach(function (opt) {
+        opt.addEventListener('click', function () {
+            sizeOptions.forEach(function (o) { o.classList.remove('selected'); });
+            opt.classList.add('selected');
+            selectedStock = parseInt(opt.dataset.stock, 10) || 0;
+            variantIdInput.value = opt.dataset.id;
+            qtyInput.value = 1;
+            qtyInput.max = selectedStock;
+            if (addToCart) {
+                addToCart.disabled = false;
+                addToCart.textContent = 'Add to cart';
+            }
+        });
+    });
+
+    if (qtyMinus) {
+        qtyMinus.addEventListener('click', function () {
+            var val = parseInt(qtyInput.value, 10) || 1;
+            if (val > 1) qtyInput.value = val - 1;
+        });
+    }
+    if (qtyPlus) {
+        qtyPlus.addEventListener('click', function () {
+            var val = parseInt(qtyInput.value, 10) || 1;
+            if (val < selectedStock) qtyInput.value = val + 1;
+        });
+    }
+})();
+</script>
+{% endblock %}
