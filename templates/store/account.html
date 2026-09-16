@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}My Account — Cisco Sports Center{% endblock %}
+
+{% block content %}
+<div class="dash-page">
+    <h1 class="dash-h1">My Account</h1>
+
+    <div class="dash-card">
+        <h2>Account details</h2>
+        <table class="specs-table">
+            <tr><th>Username</th><td>{{ user.username }}</td></tr>
+            <tr><th>Email</th><td>{{ user.email|default:"—" }}</td></tr>
+            <tr><th>Name</th><td>{{ user.get_full_name|default:"—" }}</td></tr>
+            <tr><th>Member since</th><td>{{ user.date_joined|date:"d M Y" }}</td></tr>
+        </table>
+    </div>
+
+    <div class="dash-card">
+        <h2>Recent orders</h2>
+        {% if orders %}
+            <ul class="my-orders">
+                {% for order in orders %}
+                <li class="my-order-item">
+                    <div class="my-order-head">
+                        <strong>Order #{{ order.id }}</strong>
+                        <span class="order-status status-{{ order.status }}">{{ order.get_status_display }}</span>
+                    </div>
+                    <span class="summary-line">UGX {{ order.total }} — {{ order.created_at|date:"d M Y" }}</span>
+                    <ul class="my-order-items">
+                        {% for item in order.items.all %}
+                        <li>{{ item.quantity }}x {{ item.variant.jersey.name }} ({{ item.variant.size }})</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="dash-empty">No orders yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

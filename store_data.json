@@ -1,0 +1,3745 @@
+[
+{
+  "model": "store.team",
+  "pk": 1,
+  "fields": {
+    "name": "Liverpool",
+    "slug": "liverpool",
+    "league": "Premier league",
+    "logo": "teams/Liverpool-Logo-Football-Club-Soccer-Team.webp",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 2,
+  "fields": {
+    "name": "Manchester United",
+    "slug": "manchester-united",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 3,
+  "fields": {
+    "name": "barcelona",
+    "slug": "barcelona",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 4,
+  "fields": {
+    "name": "PSG",
+    "slug": "psg",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 5,
+  "fields": {
+    "name": "Arsenal",
+    "slug": "arsenal",
+    "league": "Premier league",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 6,
+  "fields": {
+    "name": "Manchester City",
+    "slug": "manchester-city",
+    "league": "Premier league",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 7,
+  "fields": {
+    "name": "Chelsea",
+    "slug": "chelsea",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 8,
+  "fields": {
+    "name": "Tottenham Hotspur",
+    "slug": "tottenham-hotspur",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 9,
+  "fields": {
+    "name": "Newcastle United",
+    "slug": "newcastle-united",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 10,
+  "fields": {
+    "name": "Aston Villa",
+    "slug": "aston-villa",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 11,
+  "fields": {
+    "name": "West Ham United",
+    "slug": "west-ham-united",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 12,
+  "fields": {
+    "name": "Everton",
+    "slug": "everton",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 13,
+  "fields": {
+    "name": "Leicester City",
+    "slug": "leicester-city",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 14,
+  "fields": {
+    "name": "Brighton & Hove Albion",
+    "slug": "brighton-hove-albion",
+    "league": "Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 15,
+  "fields": {
+    "name": "Real Madrid",
+    "slug": "real-madrid",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 16,
+  "fields": {
+    "name": "Atletico Madrid",
+    "slug": "atletico-madrid",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 17,
+  "fields": {
+    "name": "Sevilla",
+    "slug": "sevilla",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 18,
+  "fields": {
+    "name": "Real Sociedad",
+    "slug": "real-sociedad",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 19,
+  "fields": {
+    "name": "Valencia",
+    "slug": "valencia",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 20,
+  "fields": {
+    "name": "Villarreal",
+    "slug": "villarreal",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 21,
+  "fields": {
+    "name": "Athletic Bilbao",
+    "slug": "athletic-bilbao",
+    "league": "La Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 22,
+  "fields": {
+    "name": "Juventus",
+    "slug": "juventus",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 23,
+  "fields": {
+    "name": "AC Milan",
+    "slug": "ac-milan",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 24,
+  "fields": {
+    "name": "Inter Milan",
+    "slug": "inter-milan",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 25,
+  "fields": {
+    "name": "Napoli",
+    "slug": "napoli",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 26,
+  "fields": {
+    "name": "AS Roma",
+    "slug": "as-roma",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 27,
+  "fields": {
+    "name": "Lazio",
+    "slug": "lazio",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 28,
+  "fields": {
+    "name": "Atalanta",
+    "slug": "atalanta",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 29,
+  "fields": {
+    "name": "Fiorentina",
+    "slug": "fiorentina",
+    "league": "Serie A",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 30,
+  "fields": {
+    "name": "Bayern Munich",
+    "slug": "bayern-munich",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 31,
+  "fields": {
+    "name": "Borussia Dortmund",
+    "slug": "borussia-dortmund",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 32,
+  "fields": {
+    "name": "RB Leipzig",
+    "slug": "rb-leipzig",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 33,
+  "fields": {
+    "name": "Bayer Leverkusen",
+    "slug": "bayer-leverkusen",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 34,
+  "fields": {
+    "name": "Borussia Monchengladbach",
+    "slug": "borussia-monchengladbach",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 35,
+  "fields": {
+    "name": "Schalke 04",
+    "slug": "schalke-04",
+    "league": "Bundesliga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 36,
+  "fields": {
+    "name": "Paris Saint-Germain",
+    "slug": "paris-saint-germain",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 37,
+  "fields": {
+    "name": "Marseille",
+    "slug": "marseille",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 38,
+  "fields": {
+    "name": "Lyon",
+    "slug": "lyon",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 39,
+  "fields": {
+    "name": "Monaco",
+    "slug": "monaco",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 40,
+  "fields": {
+    "name": "Lille",
+    "slug": "lille",
+    "league": "Ligue 1",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 41,
+  "fields": {
+    "name": "Ajax",
+    "slug": "ajax",
+    "league": "Eredivisie",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 42,
+  "fields": {
+    "name": "Porto",
+    "slug": "porto",
+    "league": "Primeira Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 43,
+  "fields": {
+    "name": "Benfica",
+    "slug": "benfica",
+    "league": "Primeira Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 44,
+  "fields": {
+    "name": "Sporting CP",
+    "slug": "sporting-cp",
+    "league": "Primeira Liga",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 45,
+  "fields": {
+    "name": "Celtic",
+    "slug": "celtic",
+    "league": "Scottish Premiership",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 46,
+  "fields": {
+    "name": "Rangers",
+    "slug": "rangers",
+    "league": "Scottish Premiership",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 47,
+  "fields": {
+    "name": "Brazil",
+    "slug": "brazil",
+    "league": "National Team",
+    "logo": "",
+    "category": "nations",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 48,
+  "fields": {
+    "name": "Argentina",
+    "slug": "argentina",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 49,
+  "fields": {
+    "name": "Portugal",
+    "slug": "portugal",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 50,
+  "fields": {
+    "name": "France",
+    "slug": "france",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 51,
+  "fields": {
+    "name": "England",
+    "slug": "england",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 52,
+  "fields": {
+    "name": "Germany",
+    "slug": "germany",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 53,
+  "fields": {
+    "name": "Spain",
+    "slug": "spain",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 54,
+  "fields": {
+    "name": "Uganda Cranes",
+    "slug": "uganda-cranes",
+    "league": "National Team",
+    "logo": "",
+    "category": "nations",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 55,
+  "fields": {
+    "name": "Nigeria",
+    "slug": "nigeria",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 56,
+  "fields": {
+    "name": "Ghana",
+    "slug": "ghana",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 57,
+  "fields": {
+    "name": "Kenya",
+    "slug": "kenya",
+    "league": "National Team",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 58,
+  "fields": {
+    "name": "KCCA FC",
+    "slug": "kcca-fc",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 59,
+  "fields": {
+    "name": "Vipers SC",
+    "slug": "vipers-sc",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 60,
+  "fields": {
+    "name": "SC Villa",
+    "slug": "sc-villa",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 61,
+  "fields": {
+    "name": "URA FC",
+    "slug": "ura-fc",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 62,
+  "fields": {
+    "name": "Express FC",
+    "slug": "express-fc",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 63,
+  "fields": {
+    "name": "Bul FC",
+    "slug": "bul-fc",
+    "league": "Uganda Premier League",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 64,
+  "fields": {
+    "name": "Al Nassr",
+    "slug": "al-nassr",
+    "league": "Saudi Pro",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 65,
+  "fields": {
+    "name": "Vintage",
+    "slug": "vintage",
+    "league": "All",
+    "logo": "",
+    "category": "clubs",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 66,
+  "fields": {
+    "name": "Italy",
+    "slug": "italy",
+    "league": "National Team",
+    "logo": "",
+    "category": "nations",
+    "order": 0
+  }
+},
+{
+  "model": "store.team",
+  "pk": 67,
+  "fields": {
+    "name": "Jamaica",
+    "slug": "jamaica",
+    "league": "National",
+    "logo": "",
+    "category": "nations",
+    "order": 0
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 1,
+  "fields": {
+    "team": 1,
+    "kind": "home",
+    "season": "25/26",
+    "name": "Liverpool",
+    "slug": "liverpool-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/s-l1600.webp",
+    "is_active": true,
+    "created_at": "2026-09-14T19:32:06.107Z",
+    "updated_at": "2026-09-14T19:32:06.107Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 2,
+  "fields": {
+    "team": 1,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Liverpool Away 26/27",
+    "slug": "liverpool-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/c5ee7d70-2b41-4285-aa06-2771649717b5.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:08:48.823Z",
+    "updated_at": "2026-09-14T20:10:07.348Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 3,
+  "fields": {
+    "team": 2,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Manchester United Home 26/27",
+    "slug": "manchester-united-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/9e64a85a-6aee-408f-954d-149b50efa1d9.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:29:03.762Z",
+    "updated_at": "2026-09-14T20:29:46.120Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 4,
+  "fields": {
+    "team": 5,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Arsenal Home 26/27",
+    "slug": "arsenal-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/c1be7543-1ffa-475a-80db-403173d6200a.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:36:27.345Z",
+    "updated_at": "2026-09-14T20:48:00.211Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 5,
+  "fields": {
+    "team": 5,
+    "kind": "away",
+    "season": "25/26",
+    "name": "Arsenal Away 25/26",
+    "slug": "arsenal-away-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/72087312-e953-410e-b1f0-649b3f1e0eb3.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:39:50.353Z",
+    "updated_at": "2026-09-14T20:39:50.353Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 6,
+  "fields": {
+    "team": 3,
+    "kind": "away",
+    "season": "25/26",
+    "name": "barcelona Away 25/26",
+    "slug": "barcelona-away-2526-2526",
+    "description": "Mamba Collection",
+    "price": "40000.00",
+    "image": "jerseys/90472b8e-b5ef-45b8-aea7-4cf2714a199c.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:44:17.526Z",
+    "updated_at": "2026-09-14T20:47:24.424Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 7,
+  "fields": {
+    "team": 5,
+    "kind": "away",
+    "season": "25/26",
+    "name": "Arsenal Away 25/26",
+    "slug": "special-kit-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/eb2e77ed-a0ec-443f-b0bf-174e2f1800af.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-14T20:46:46.235Z",
+    "updated_at": "2026-09-15T19:08:20.624Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 8,
+  "fields": {
+    "team": 7,
+    "kind": "home",
+    "season": "25/26",
+    "name": "Chelsea Home 26/27",
+    "slug": "chelsea-home-2627-2627",
+    "description": "Polo Collar Special edition",
+    "price": "40000.00",
+    "image": "jerseys/e7ad3d3e-531d-40c9-8a5f-dd6288cf3760.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T10:47:42.202Z",
+    "updated_at": "2026-09-15T11:03:24.875Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 9,
+  "fields": {
+    "team": 47,
+    "kind": "home",
+    "season": "2026",
+    "name": "Brazil Home 2026",
+    "slug": "brazil-home-2026-2026",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/f8afb421-2e3c-4117-b2d1-905fba3c90f2.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T10:52:44.655Z",
+    "updated_at": "2026-09-15T10:52:44.655Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 10,
+  "fields": {
+    "team": 5,
+    "kind": "home",
+    "season": "25/26",
+    "name": "Arsenal Home 25/26",
+    "slug": "arsenal-home-2526-2526",
+    "description": "Special kit for Arsenal 2025/2026 champions",
+    "price": "40000.00",
+    "image": "jerseys/cb3c1334-2f21-4508-89d4-6e2ba4da8e92.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T10:54:51.505Z",
+    "updated_at": "2026-09-15T10:54:51.506Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 12,
+  "fields": {
+    "team": 22,
+    "kind": "third",
+    "season": "25/26",
+    "name": "Juventus Third 25/26",
+    "slug": "juventus-third-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/ccfa8a1a-e4f1-49aa-a429-c2c57401eda0.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T11:08:46.656Z",
+    "updated_at": "2026-09-15T11:08:46.656Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 13,
+  "fields": {
+    "team": 7,
+    "kind": "away",
+    "season": "25/26",
+    "name": "Chelsea Away 25/26",
+    "slug": "chelsea-away-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/Screenshot_20250721_114329_Chrome.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T11:14:34.362Z",
+    "updated_at": "2026-09-15T12:19:19.119Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 14,
+  "fields": {
+    "team": 6,
+    "kind": "away",
+    "season": "25/26",
+    "name": "Manchester City Away 25/26",
+    "slug": "manchester-city-away-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/images_5.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T11:26:28.371Z",
+    "updated_at": "2026-09-15T12:17:49.904Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 15,
+  "fields": {
+    "team": 64,
+    "kind": "retro",
+    "season": "25/26",
+    "name": "Al Nassr Retro 25/26",
+    "slug": "al-nassr-retro-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/f3f35643-1fab-4efa-ba51-d3161e84fb2b.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:09:59.185Z",
+    "updated_at": "2026-09-15T12:09:59.185Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 16,
+  "fields": {
+    "team": 2,
+    "kind": "vintage",
+    "season": "1998/1999",
+    "name": "Manchester United Away1998/1999",
+    "slug": "vintage-away-19981999-19981999",
+    "description": "",
+    "price": "70000.00",
+    "image": "jerseys/ae99d3d4-f46e-46f1-a1c1-66a001712540.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:13:57.096Z",
+    "updated_at": "2026-09-15T19:17:33.771Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 17,
+  "fields": {
+    "team": 5,
+    "kind": "vintage",
+    "season": "2005/06",
+    "name": "Arsenal",
+    "slug": "vintage-home-200506-200506",
+    "description": "",
+    "price": "70000.00",
+    "image": "jerseys/853f3dd7-4961-45f6-8ddf-826d887b6db4.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:21:46.204Z",
+    "updated_at": "2026-09-15T19:19:19.178Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 18,
+  "fields": {
+    "team": 2,
+    "kind": "vintage",
+    "season": "1993/1994 and 94/95",
+    "name": "Manchester United",
+    "slug": "manchester-united-19931994-and-9495",
+    "description": "",
+    "price": "70000.00",
+    "image": "jerseys/1f7f4f62-9b19-45d5-8234-4bf700a07440.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:24:49.679Z",
+    "updated_at": "2026-09-15T19:20:08.118Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 19,
+  "fields": {
+    "team": 15,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Real Madrid Away 26/27",
+    "slug": "real-madrid-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/Image-50.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:34:41.649Z",
+    "updated_at": "2026-09-15T12:35:00.518Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 20,
+  "fields": {
+    "team": 15,
+    "kind": "home",
+    "season": "24/25",
+    "name": "Real Madrid Home 24/25",
+    "slug": "real-madrid-home-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/images_6.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:37:38.859Z",
+    "updated_at": "2026-09-15T12:37:38.859Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 21,
+  "fields": {
+    "team": 66,
+    "kind": "home",
+    "season": "25/26",
+    "name": "Italy Home 25/26",
+    "slug": "italy-home-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/56b64f33-d0ec-4c5a-abd8-244d9edf7c83.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-15T12:37:39.136Z",
+    "updated_at": "2026-09-15T12:37:39.136Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 22,
+  "fields": {
+    "team": 58,
+    "kind": "home",
+    "season": "26/27",
+    "name": "KCCA FC Home 26/27",
+    "slug": "kcca-fc-home-2627-2627",
+    "description": "",
+    "price": "50000.00",
+    "image": "jerseys/images_1.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:10:58.258Z",
+    "updated_at": "2026-09-15T18:10:58.258Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 23,
+  "fields": {
+    "team": 58,
+    "kind": "away",
+    "season": "26/27",
+    "name": "KCCA FC Away 26/27",
+    "slug": "kcca-fc-away-2627-2627",
+    "description": "",
+    "price": "50000.00",
+    "image": "jerseys/2cca.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:17:37.392Z",
+    "updated_at": "2026-09-15T18:17:37.392Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 24,
+  "fields": {
+    "team": 15,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Real Madrid Home 26/27",
+    "slug": "real-madrid-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/images_7.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:22:50.738Z",
+    "updated_at": "2026-09-15T18:29:00.944Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 25,
+  "fields": {
+    "team": 15,
+    "kind": "third",
+    "season": "26/27",
+    "name": "Real Madrid Third 26/27",
+    "slug": "real-madrid-third-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/2026051715453514.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:26:50.078Z",
+    "updated_at": "2026-09-15T18:30:22.451Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 26,
+  "fields": {
+    "team": 43,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Benfica Home 26/27",
+    "slug": "benfica-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/ben.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:35:39.545Z",
+    "updated_at": "2026-09-15T18:35:39.545Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 27,
+  "fields": {
+    "team": 43,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Benfica Away 26/27",
+    "slug": "benfica-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/ben2.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:37:28.999Z",
+    "updated_at": "2026-09-15T18:37:28.999Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 28,
+  "fields": {
+    "team": 43,
+    "kind": "third",
+    "season": "26/27",
+    "name": "Bayer Leverkusen Third 26/27",
+    "slug": "bayer-leverkusen-third-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/ben3.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:50:49.388Z",
+    "updated_at": "2026-09-15T19:53:37.749Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 29,
+  "fields": {
+    "team": 31,
+    "kind": "third",
+    "season": "26/27",
+    "name": "Borussia Dortmund Third 26/27",
+    "slug": "borussia-dortmund-third-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bvb.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T18:59:30.812Z",
+    "updated_at": "2026-09-15T18:59:30.812Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 30,
+  "fields": {
+    "team": 31,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Borussia Dortmund Home 26/27",
+    "slug": "borussia-dortmund-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bvb2.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:01:06.086Z",
+    "updated_at": "2026-09-15T19:01:06.086Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 31,
+  "fields": {
+    "team": 31,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Borussia Dortmund Away 26/27",
+    "slug": "borussia-dortmund-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bvb12.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:03:10.896Z",
+    "updated_at": "2026-09-15T19:03:10.896Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 32,
+  "fields": {
+    "team": 6,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Manchester City Home 26/27",
+    "slug": "manchester-city-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/city.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:11:30.703Z",
+    "updated_at": "2026-09-15T19:11:30.703Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 33,
+  "fields": {
+    "team": 6,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Manchester City Away 26/27",
+    "slug": "manchester-city-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/cityyyyyy.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:24:34.285Z",
+    "updated_at": "2026-09-15T19:24:34.285Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 34,
+  "fields": {
+    "team": 6,
+    "kind": "third",
+    "season": "26/27",
+    "name": "Manchester City Third 26/27",
+    "slug": "manchester-city-third-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/city_third.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:27:37.453Z",
+    "updated_at": "2026-09-15T19:27:37.454Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 35,
+  "fields": {
+    "team": 30,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Bayern Munich Home 26/27",
+    "slug": "bayern-munich-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bayH.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:56:56.275Z",
+    "updated_at": "2026-09-15T19:56:56.275Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 36,
+  "fields": {
+    "team": 30,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Bayern Munich Away 26/27",
+    "slug": "bayern-munich-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bayA.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:58:23.597Z",
+    "updated_at": "2026-09-15T19:58:23.597Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 37,
+  "fields": {
+    "team": 30,
+    "kind": "third",
+    "season": "26/27",
+    "name": "Bayern Munich Third 26/27",
+    "slug": "bayern-munich-third-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/bayT.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T19:59:12.725Z",
+    "updated_at": "2026-09-15T19:59:12.725Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 38,
+  "fields": {
+    "team": 54,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Uganda Cranes Home 26/27",
+    "slug": "uganda-cranes-home-2627-2627",
+    "description": "",
+    "price": "50000.00",
+    "image": "jerseys/UGh.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T20:04:13.125Z",
+    "updated_at": "2026-09-15T20:04:13.125Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 39,
+  "fields": {
+    "team": 54,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Uganda Cranes Away 26/27",
+    "slug": "uganda-cranes-away-2627-2627",
+    "description": "",
+    "price": "50000.00",
+    "image": "jerseys/UGa.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T20:05:19.266Z",
+    "updated_at": "2026-09-15T20:05:19.266Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 40,
+  "fields": {
+    "team": 49,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Portugal Home 26/27",
+    "slug": "portugal-home-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/port.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T21:16:19.626Z",
+    "updated_at": "2026-09-15T21:16:19.626Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 41,
+  "fields": {
+    "team": 49,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Portugal Away 26/27",
+    "slug": "portugal-away-2627-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/port2.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T21:17:20.173Z",
+    "updated_at": "2026-09-15T21:17:20.173Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 42,
+  "fields": {
+    "team": 49,
+    "kind": "third",
+    "season": "25/26",
+    "name": "Portugal Third 25/26",
+    "slug": "portugal-third-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/portT.jpg",
+    "is_active": true,
+    "created_at": "2026-09-15T21:18:15.625Z",
+    "updated_at": "2026-09-15T21:18:15.625Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 43,
+  "fields": {
+    "team": 1,
+    "kind": "retro",
+    "season": "93/94",
+    "name": "Liverpool Retro Jersey",
+    "slug": "liverpool-retro-jersey-9394",
+    "description": "",
+    "price": "70000.00",
+    "image": "jerseys/65e5c1ddf52f37a9963401ee2ea1f4db.jpg",
+    "is_active": true,
+    "created_at": "2026-09-16T04:38:46.934Z",
+    "updated_at": "2026-09-16T04:38:46.934Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 44,
+  "fields": {
+    "team": 1,
+    "kind": "vintage",
+    "season": "06/08",
+    "name": "Liverpool home",
+    "slug": "liverpool-home-0608",
+    "description": "",
+    "price": "70000.00",
+    "image": "jerseys/93669b862176223736347e8521ed1d1b.jpg",
+    "is_active": true,
+    "created_at": "2026-09-16T04:41:47.647Z",
+    "updated_at": "2026-09-16T04:41:47.647Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 45,
+  "fields": {
+    "team": 1,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Liverpool Third kit",
+    "slug": "liverpool-third-kit-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/8537ebc039f64cbcc8ca4fe3eebd3fa3.jpg",
+    "is_active": true,
+    "created_at": "2026-09-16T04:43:43.323Z",
+    "updated_at": "2026-09-16T04:43:43.323Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 46,
+  "fields": {
+    "team": 2,
+    "kind": "away",
+    "season": "26/27",
+    "name": "Manchester United Away",
+    "slug": "manchester-united-away-2627",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/3e9b10f88f0f6c1c7b8620001545a3d4.jpg",
+    "is_active": true,
+    "created_at": "2026-09-16T04:46:35.273Z",
+    "updated_at": "2026-09-16T04:46:35.273Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 47,
+  "fields": {
+    "team": 2,
+    "kind": "third",
+    "season": "25/26",
+    "name": "Manchester United Third 25/26",
+    "slug": "manchester-united-third-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/1677ba38-c5b8-464d-a6e5-3a4c5babbfb9.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:04:03.731Z",
+    "updated_at": "2026-09-16T08:04:03.731Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 48,
+  "fields": {
+    "team": 1,
+    "kind": "third",
+    "season": "25/26",
+    "name": "Liverpool Third 25/26",
+    "slug": "liverpool-third-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.09.13.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:18:36.718Z",
+    "updated_at": "2026-09-16T08:18:36.719Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 49,
+  "fields": {
+    "team": 67,
+    "kind": "home",
+    "season": "25/26",
+    "name": "Jamaica Home 25/26",
+    "slug": "jamaica-home-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.08.57.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:22:22.334Z",
+    "updated_at": "2026-09-16T08:22:22.334Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 50,
+  "fields": {
+    "team": 8,
+    "kind": "away",
+    "season": "25/26",
+    "name": "Tottenham Hotspur Away 25/26",
+    "slug": "tottenham-hotspur-away-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.09.27.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:26:08.264Z",
+    "updated_at": "2026-09-16T08:26:08.264Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 51,
+  "fields": {
+    "team": 8,
+    "kind": "home",
+    "season": "24/25",
+    "name": "Tottenham Hotspur Home 24/25",
+    "slug": "tottenham-hotspur-home-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.09.41.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:27:33.742Z",
+    "updated_at": "2026-09-16T08:27:33.742Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 52,
+  "fields": {
+    "team": 5,
+    "kind": "away",
+    "season": "24/25",
+    "name": "Arsenal Away 24/25",
+    "slug": "arsenal-away-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.09.56.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:29:40.491Z",
+    "updated_at": "2026-09-16T08:29:40.491Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 53,
+  "fields": {
+    "team": 5,
+    "kind": "third",
+    "season": "24/25",
+    "name": "Arsenal Third 24/25",
+    "slug": "arsenal-third-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.10.18.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:32:16.673Z",
+    "updated_at": "2026-09-16T08:32:16.673Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 54,
+  "fields": {
+    "team": 23,
+    "kind": "third",
+    "season": "25/26",
+    "name": "AC Milan Third 25/26",
+    "slug": "ac-milan-third-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.10.51.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:33:38.404Z",
+    "updated_at": "2026-09-16T08:33:38.404Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 55,
+  "fields": {
+    "team": 23,
+    "kind": "away",
+    "season": "25/26",
+    "name": "AC Milan Away 25/26",
+    "slug": "ac-milan-away-2526-2526",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.11.12.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:35:15.975Z",
+    "updated_at": "2026-09-16T08:35:15.975Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 56,
+  "fields": {
+    "team": 52,
+    "kind": "home",
+    "season": "24/25",
+    "name": "Germany Home 24/25",
+    "slug": "germany-home-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.11.25.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:36:52.219Z",
+    "updated_at": "2026-09-16T08:36:52.219Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 57,
+  "fields": {
+    "team": 53,
+    "kind": "home",
+    "season": "24/25",
+    "name": "Spain Home 24/25",
+    "slug": "spain-home-2425-2425",
+    "description": "Euro",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.11.41.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:39:01.020Z",
+    "updated_at": "2026-09-16T08:39:01.020Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 58,
+  "fields": {
+    "team": 51,
+    "kind": "away",
+    "season": "24/25",
+    "name": "England Away 24/25",
+    "slug": "england-away-2425-2425",
+    "description": "Euro",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.11.56.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:41:03.838Z",
+    "updated_at": "2026-09-16T08:41:03.838Z"
+  }
+},
+{
+  "model": "store.jersey",
+  "pk": 59,
+  "fields": {
+    "team": 36,
+    "kind": "home",
+    "season": "26/27",
+    "name": "Paris Saint-Germain Home 24/25",
+    "slug": "paris-saint-germain-home-2425-2425",
+    "description": "",
+    "price": "40000.00",
+    "image": "jerseys/WhatsApp_Image_2026-09-16_at_11.12.12.jpeg",
+    "is_active": true,
+    "created_at": "2026-09-16T08:45:47.362Z",
+    "updated_at": "2026-09-16T08:46:20.613Z"
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 1,
+  "fields": {
+    "jersey": 1,
+    "size": "S",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 2,
+  "fields": {
+    "jersey": 2,
+    "size": "S",
+    "stock": 50
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 3,
+  "fields": {
+    "jersey": 2,
+    "size": "L",
+    "stock": 47
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 4,
+  "fields": {
+    "jersey": 2,
+    "size": "M",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 5,
+  "fields": {
+    "jersey": 2,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 6,
+  "fields": {
+    "jersey": 2,
+    "size": "XXL",
+    "stock": 60
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 7,
+  "fields": {
+    "jersey": 3,
+    "size": "S",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 8,
+  "fields": {
+    "jersey": 3,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 9,
+  "fields": {
+    "jersey": 3,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 10,
+  "fields": {
+    "jersey": 3,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 11,
+  "fields": {
+    "jersey": 3,
+    "size": "XXL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 12,
+  "fields": {
+    "jersey": 4,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 13,
+  "fields": {
+    "jersey": 4,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 14,
+  "fields": {
+    "jersey": 4,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 15,
+  "fields": {
+    "jersey": 4,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 16,
+  "fields": {
+    "jersey": 5,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 17,
+  "fields": {
+    "jersey": 5,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 18,
+  "fields": {
+    "jersey": 5,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 19,
+  "fields": {
+    "jersey": 5,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 20,
+  "fields": {
+    "jersey": 6,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 21,
+  "fields": {
+    "jersey": 6,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 22,
+  "fields": {
+    "jersey": 6,
+    "size": "XL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 23,
+  "fields": {
+    "jersey": 6,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 24,
+  "fields": {
+    "jersey": 7,
+    "size": "M",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 25,
+  "fields": {
+    "jersey": 7,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 26,
+  "fields": {
+    "jersey": 7,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 27,
+  "fields": {
+    "jersey": 7,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 28,
+  "fields": {
+    "jersey": 8,
+    "size": "M",
+    "stock": 20
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 29,
+  "fields": {
+    "jersey": 8,
+    "size": "L",
+    "stock": 20
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 30,
+  "fields": {
+    "jersey": 8,
+    "size": "XL",
+    "stock": 20
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 31,
+  "fields": {
+    "jersey": 8,
+    "size": "XXL",
+    "stock": 20
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 32,
+  "fields": {
+    "jersey": 9,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 33,
+  "fields": {
+    "jersey": 9,
+    "size": "L",
+    "stock": 18
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 34,
+  "fields": {
+    "jersey": 9,
+    "size": "XL",
+    "stock": 30
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 35,
+  "fields": {
+    "jersey": 9,
+    "size": "XXL",
+    "stock": 25
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 36,
+  "fields": {
+    "jersey": 10,
+    "size": "M",
+    "stock": 20
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 37,
+  "fields": {
+    "jersey": 10,
+    "size": "L",
+    "stock": 24
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 38,
+  "fields": {
+    "jersey": 10,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 39,
+  "fields": {
+    "jersey": 10,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 44,
+  "fields": {
+    "jersey": 12,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 45,
+  "fields": {
+    "jersey": 12,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 46,
+  "fields": {
+    "jersey": 12,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 47,
+  "fields": {
+    "jersey": 12,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 48,
+  "fields": {
+    "jersey": 13,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 49,
+  "fields": {
+    "jersey": 13,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 50,
+  "fields": {
+    "jersey": 13,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 51,
+  "fields": {
+    "jersey": 13,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 52,
+  "fields": {
+    "jersey": 14,
+    "size": "M",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 53,
+  "fields": {
+    "jersey": 14,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 54,
+  "fields": {
+    "jersey": 14,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 55,
+  "fields": {
+    "jersey": 14,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 56,
+  "fields": {
+    "jersey": 15,
+    "size": "M",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 57,
+  "fields": {
+    "jersey": 15,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 58,
+  "fields": {
+    "jersey": 15,
+    "size": "XL",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 59,
+  "fields": {
+    "jersey": 15,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 60,
+  "fields": {
+    "jersey": 16,
+    "size": "L",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 61,
+  "fields": {
+    "jersey": 16,
+    "size": "XL",
+    "stock": 17
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 62,
+  "fields": {
+    "jersey": 16,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 63,
+  "fields": {
+    "jersey": 17,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 64,
+  "fields": {
+    "jersey": 17,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 65,
+  "fields": {
+    "jersey": 17,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 66,
+  "fields": {
+    "jersey": 18,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 67,
+  "fields": {
+    "jersey": 18,
+    "size": "XL",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 68,
+  "fields": {
+    "jersey": 18,
+    "size": "M",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 69,
+  "fields": {
+    "jersey": 19,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 70,
+  "fields": {
+    "jersey": 19,
+    "size": "L",
+    "stock": 24
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 71,
+  "fields": {
+    "jersey": 19,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 72,
+  "fields": {
+    "jersey": 19,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 73,
+  "fields": {
+    "jersey": 20,
+    "size": "M",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 74,
+  "fields": {
+    "jersey": 20,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 75,
+  "fields": {
+    "jersey": 20,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 76,
+  "fields": {
+    "jersey": 20,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 77,
+  "fields": {
+    "jersey": 21,
+    "size": "M",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 78,
+  "fields": {
+    "jersey": 21,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 79,
+  "fields": {
+    "jersey": 21,
+    "size": "L",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 80,
+  "fields": {
+    "jersey": 21,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 81,
+  "fields": {
+    "jersey": 22,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 82,
+  "fields": {
+    "jersey": 22,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 83,
+  "fields": {
+    "jersey": 22,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 84,
+  "fields": {
+    "jersey": 22,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 85,
+  "fields": {
+    "jersey": 23,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 86,
+  "fields": {
+    "jersey": 23,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 87,
+  "fields": {
+    "jersey": 23,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 88,
+  "fields": {
+    "jersey": 23,
+    "size": "XXL",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 89,
+  "fields": {
+    "jersey": 24,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 90,
+  "fields": {
+    "jersey": 24,
+    "size": "L",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 91,
+  "fields": {
+    "jersey": 24,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 92,
+  "fields": {
+    "jersey": 24,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 93,
+  "fields": {
+    "jersey": 25,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 94,
+  "fields": {
+    "jersey": 25,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 95,
+  "fields": {
+    "jersey": 25,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 96,
+  "fields": {
+    "jersey": 25,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 97,
+  "fields": {
+    "jersey": 26,
+    "size": "XL",
+    "stock": 18
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 98,
+  "fields": {
+    "jersey": 26,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 99,
+  "fields": {
+    "jersey": 26,
+    "size": "XXL",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 100,
+  "fields": {
+    "jersey": 27,
+    "size": "L",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 101,
+  "fields": {
+    "jersey": 27,
+    "size": "XL",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 102,
+  "fields": {
+    "jersey": 27,
+    "size": "XXL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 103,
+  "fields": {
+    "jersey": 27,
+    "size": "M",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 104,
+  "fields": {
+    "jersey": 28,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 105,
+  "fields": {
+    "jersey": 28,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 106,
+  "fields": {
+    "jersey": 28,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 107,
+  "fields": {
+    "jersey": 28,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 108,
+  "fields": {
+    "jersey": 29,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 109,
+  "fields": {
+    "jersey": 29,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 110,
+  "fields": {
+    "jersey": 29,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 111,
+  "fields": {
+    "jersey": 29,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 112,
+  "fields": {
+    "jersey": 30,
+    "size": "M",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 113,
+  "fields": {
+    "jersey": 30,
+    "size": "L",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 114,
+  "fields": {
+    "jersey": 30,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 115,
+  "fields": {
+    "jersey": 30,
+    "size": "XXL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 116,
+  "fields": {
+    "jersey": 31,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 117,
+  "fields": {
+    "jersey": 31,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 118,
+  "fields": {
+    "jersey": 31,
+    "size": "L",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 119,
+  "fields": {
+    "jersey": 31,
+    "size": "XXL",
+    "stock": 0
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 120,
+  "fields": {
+    "jersey": 32,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 121,
+  "fields": {
+    "jersey": 32,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 122,
+  "fields": {
+    "jersey": 32,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 123,
+  "fields": {
+    "jersey": 32,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 124,
+  "fields": {
+    "jersey": 33,
+    "size": "M",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 125,
+  "fields": {
+    "jersey": 33,
+    "size": "L",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 126,
+  "fields": {
+    "jersey": 33,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 127,
+  "fields": {
+    "jersey": 33,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 128,
+  "fields": {
+    "jersey": 34,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 129,
+  "fields": {
+    "jersey": 34,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 130,
+  "fields": {
+    "jersey": 34,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 131,
+  "fields": {
+    "jersey": 34,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 132,
+  "fields": {
+    "jersey": 35,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 133,
+  "fields": {
+    "jersey": 35,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 134,
+  "fields": {
+    "jersey": 35,
+    "size": "XXL",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 135,
+  "fields": {
+    "jersey": 36,
+    "size": "L",
+    "stock": 17
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 136,
+  "fields": {
+    "jersey": 36,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 137,
+  "fields": {
+    "jersey": 36,
+    "size": "XXL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 138,
+  "fields": {
+    "jersey": 36,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 139,
+  "fields": {
+    "jersey": 37,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 140,
+  "fields": {
+    "jersey": 37,
+    "size": "XL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 141,
+  "fields": {
+    "jersey": 37,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 142,
+  "fields": {
+    "jersey": 38,
+    "size": "M",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 143,
+  "fields": {
+    "jersey": 38,
+    "size": "L",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 144,
+  "fields": {
+    "jersey": 38,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 145,
+  "fields": {
+    "jersey": 38,
+    "size": "XXL",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 146,
+  "fields": {
+    "jersey": 39,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 147,
+  "fields": {
+    "jersey": 39,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 148,
+  "fields": {
+    "jersey": 39,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 149,
+  "fields": {
+    "jersey": 39,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 150,
+  "fields": {
+    "jersey": 40,
+    "size": "M",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 151,
+  "fields": {
+    "jersey": 40,
+    "size": "L",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 152,
+  "fields": {
+    "jersey": 40,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 153,
+  "fields": {
+    "jersey": 40,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 154,
+  "fields": {
+    "jersey": 41,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 155,
+  "fields": {
+    "jersey": 41,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 156,
+  "fields": {
+    "jersey": 41,
+    "size": "XXL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 157,
+  "fields": {
+    "jersey": 42,
+    "size": "L",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 158,
+  "fields": {
+    "jersey": 42,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 159,
+  "fields": {
+    "jersey": 42,
+    "size": "XXL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 160,
+  "fields": {
+    "jersey": 43,
+    "size": "L",
+    "stock": 2
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 161,
+  "fields": {
+    "jersey": 43,
+    "size": "XL",
+    "stock": 3
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 162,
+  "fields": {
+    "jersey": 43,
+    "size": "XXL",
+    "stock": 5
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 163,
+  "fields": {
+    "jersey": 44,
+    "size": "L",
+    "stock": 0
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 164,
+  "fields": {
+    "jersey": 44,
+    "size": "XL",
+    "stock": 3
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 165,
+  "fields": {
+    "jersey": 44,
+    "size": "XXL",
+    "stock": 5
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 166,
+  "fields": {
+    "jersey": 45,
+    "size": "M",
+    "stock": 5
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 167,
+  "fields": {
+    "jersey": 45,
+    "size": "L",
+    "stock": 9
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 168,
+  "fields": {
+    "jersey": 45,
+    "size": "XL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 169,
+  "fields": {
+    "jersey": 45,
+    "size": "XXL",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 170,
+  "fields": {
+    "jersey": 46,
+    "size": "M",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 171,
+  "fields": {
+    "jersey": 46,
+    "size": "L",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 172,
+  "fields": {
+    "jersey": 46,
+    "size": "XL",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 173,
+  "fields": {
+    "jersey": 46,
+    "size": "XXL",
+    "stock": 8
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 174,
+  "fields": {
+    "jersey": 47,
+    "size": "L",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 175,
+  "fields": {
+    "jersey": 47,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 176,
+  "fields": {
+    "jersey": 47,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 177,
+  "fields": {
+    "jersey": 47,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 178,
+  "fields": {
+    "jersey": 48,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 179,
+  "fields": {
+    "jersey": 48,
+    "size": "XL",
+    "stock": 10
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 180,
+  "fields": {
+    "jersey": 48,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 181,
+  "fields": {
+    "jersey": 48,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 182,
+  "fields": {
+    "jersey": 49,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 183,
+  "fields": {
+    "jersey": 49,
+    "size": "L",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 184,
+  "fields": {
+    "jersey": 49,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 185,
+  "fields": {
+    "jersey": 49,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 186,
+  "fields": {
+    "jersey": 50,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 187,
+  "fields": {
+    "jersey": 50,
+    "size": "L",
+    "stock": 9
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 188,
+  "fields": {
+    "jersey": 50,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 189,
+  "fields": {
+    "jersey": 50,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 190,
+  "fields": {
+    "jersey": 51,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 191,
+  "fields": {
+    "jersey": 51,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 192,
+  "fields": {
+    "jersey": 51,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 193,
+  "fields": {
+    "jersey": 52,
+    "size": "L",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 194,
+  "fields": {
+    "jersey": 52,
+    "size": "M",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 195,
+  "fields": {
+    "jersey": 52,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 196,
+  "fields": {
+    "jersey": 52,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 197,
+  "fields": {
+    "jersey": 53,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 198,
+  "fields": {
+    "jersey": 53,
+    "size": "L",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 199,
+  "fields": {
+    "jersey": 53,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 200,
+  "fields": {
+    "jersey": 53,
+    "size": "XXL",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 201,
+  "fields": {
+    "jersey": 54,
+    "size": "L",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 202,
+  "fields": {
+    "jersey": 54,
+    "size": "XL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 203,
+  "fields": {
+    "jersey": 54,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 204,
+  "fields": {
+    "jersey": 55,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 205,
+  "fields": {
+    "jersey": 55,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 206,
+  "fields": {
+    "jersey": 55,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 207,
+  "fields": {
+    "jersey": 56,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 208,
+  "fields": {
+    "jersey": 56,
+    "size": "XL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 209,
+  "fields": {
+    "jersey": 56,
+    "size": "XXL",
+    "stock": 11
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 210,
+  "fields": {
+    "jersey": 57,
+    "size": "L",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 211,
+  "fields": {
+    "jersey": 57,
+    "size": "M",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 212,
+  "fields": {
+    "jersey": 57,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 213,
+  "fields": {
+    "jersey": 57,
+    "size": "XXL",
+    "stock": 12
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 214,
+  "fields": {
+    "jersey": 58,
+    "size": "M",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 215,
+  "fields": {
+    "jersey": 58,
+    "size": "L",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 216,
+  "fields": {
+    "jersey": 58,
+    "size": "XL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 217,
+  "fields": {
+    "jersey": 58,
+    "size": "XXL",
+    "stock": 13
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 218,
+  "fields": {
+    "jersey": 59,
+    "size": "M",
+    "stock": 16
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 219,
+  "fields": {
+    "jersey": 59,
+    "size": "L",
+    "stock": 15
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 220,
+  "fields": {
+    "jersey": 59,
+    "size": "XL",
+    "stock": 14
+  }
+},
+{
+  "model": "store.jerseyvariant",
+  "pk": 221,
+  "fields": {
+    "jersey": 59,
+    "size": "XXL",
+    "stock": 14
+  }
+}
+]

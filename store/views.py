@@ -69,6 +69,17 @@ def account_login(request):
 
     return render(request, "store/account_login.html", {"form": form})
 
+@login_required(login_url="store:account_login")
+def account_view(request):
+    orders = (
+        Order.objects.filter(customer=request.user)
+        .prefetch_related("items__variant__jersey")
+        .order_by("-created_at")[:10]
+    )
+    return render(request, "store/account.html", {
+        "orders": orders,
+    })
+
 
 def account_logout(request):
     logout(request)

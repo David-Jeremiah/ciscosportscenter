@@ -22,6 +22,7 @@ urlpatterns = [
     path("payments/webhook/", views.relworx_webhook, name="relworx_webhook"),
     path("account/signup/", views.account_signup, name="account_signup"),
     path("account/login/", views.account_login, name="account_login"),
+    path("account/", views.account_view, name="account_view"),
     path("account/logout/", views.account_logout, name="account_logout"),
     path("dashboard/", views.dashboard_overview, name="dashboard_overview"),
     path("dashboard/orders/", views.dashboard_orders, name="dashboard_orders"),

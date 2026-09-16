@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+  --ink: #F4F2EC;
+  --panel: #FFFFFF;
+  --panel-line: #E2E0D8;
+  --chalk: #14161A;
+  --chalk-dim: #5B5F68;
+  --amber: #E09400;
+  --pitch: #2E7D4F;
+  --out-of-stock: #A7ABB4;
+}
+
+:root[data-theme="dark"] {
   --ink: #14161A;
   --panel: #1C1F26;
   --panel-line: #2C303A;
@@ -12,6 +23,40 @@
   --pitch: #3E8E5E;
   --out-of-stock: #5B5F68;
 }
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--panel-line);
+  color: var(--chalk-dim);
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.theme-toggle:hover { color: var(--chalk); border-color: var(--chalk-dim); }
+
+.site-header .search-form input {
+  background: #1C1F26;
+  border-color: #2C303A;
+  color: #F4F2EC;
+}
+
+.site-header .nav-actions a,
+.site-header .theme-toggle {
+  color: #A7ABB4;
+}
+
+.site-header .nav-actions a:hover,
+.site-header .theme-toggle:hover {
+  color: #F4F2EC;
+}
+
+.site-header .theme-toggle { border-color: #2C303A; }
+.site-header .mobile-nav-toggle { border-color: #2C303A; }
+.site-header .mobile-nav-toggle span { background: #F4F2EC; }
 
 * { box-sizing: border-box; }
 
@@ -66,17 +111,18 @@ h1, h2, h3, .display {
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.02em;
+  color: #F4F2EC;
 }
 
-.site-header .brand span { color: var(--amber); }
+.site-header .brand span { color: #FFB627; }
 
 .site-header nav a {
-  color: var(--chalk-dim);
+  color: #A7ABB4;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-.site-header nav a:hover { color: var(--chalk); }
+.site-header nav a:hover { color: #F4F2EC; }
 
 /* ---------- Hero (compact) ---------- */
 
@@ -819,7 +865,7 @@ a:focus-visible, button:focus-visible {
   background: none;
   border: none;
   font-family: 'Inter', sans-serif;
-  color: var(--chalk-dim);
+  color: #A7ABB4;
   font-size: 0.95rem;
   font-weight: 500;
   padding: 10px 12px;
@@ -829,7 +875,7 @@ a:focus-visible, button:focus-visible {
 .mega-nav-trigger:hover,
 .mega-nav-item:hover .mega-nav-trigger,
 .mega-nav-item.open .mega-nav-trigger {
-  color: var(--chalk);
+  color: #F4F2EC;
 }
 
 .mega-nav-item.open .mega-nav-trigger::after,

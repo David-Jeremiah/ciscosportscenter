@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Cisco Sports Center{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+    <script src="{% static 'store/js/theme.js' %}"></script>
 </head>
 <body>
    <header class="site-header">
@@ -61,7 +62,9 @@
     </form>
 
     <div class="nav-actions">
+        <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
     {% if user.is_authenticated %}
+        <a href="{% url 'store:account_view' %}" class="account-link">Account</a>
         <a href="{% url 'store:account_logout' %}" class="account-link">Logout</a>
     {% else %}
         <a href="{% url 'store:account_login' %}" class="account-link">Account</a>
