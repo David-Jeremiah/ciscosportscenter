@@ -1,8 +1,19 @@
 from django.urls import path
 
 from . import views
+from django.contrib.sitemaps.views import sitemap
+from store.sitemaps import JerseySitemap, TeamSitemap, StaticViewSitemap
+
+
+
 
 app_name = "store"
+
+sitemaps = {
+    "jerseys": JerseySitemap,
+    "teams": TeamSitemap,
+    "static": StaticViewSitemap,
+}
 
 urlpatterns = [
     path("", views.jersey_list, name="jersey_list"),
@@ -29,4 +40,5 @@ urlpatterns = [
     path("dashboard/orders/<int:order_id>/", views.dashboard_order_detail, name="dashboard_order_detail"),
     path("dashboard/stock/", views.dashboard_stock, name="dashboard_stock"),
     path("dashboard/customers/", views.dashboard_customers, name="dashboard_customers"),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
 ]

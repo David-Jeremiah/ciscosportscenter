@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block title %}{{ jersey.name }} — Cisco Sport{% endblock %}
-{% block content %}
-
+{% load static %}
+{% block title %}{{ jersey.name }} — {{ jersey.team.name }} Jersey | Cisco Sports Center{% endblock %}
+{% block meta_description %}Buy the {{ jersey.name }} for UGX {{ jersey.price }}. Authentic {{ jersey.team.name }} jersey, sizes available, fast delivery across Uganda.{% endblock %}
+{% block og_image %}{% if jersey.image %}<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ jersey.image.url }}">{% endif %}{% endblock %}
 <section class="product-page">
     <div class="product-gallery">
         <div class="product-image" id="mainImage">

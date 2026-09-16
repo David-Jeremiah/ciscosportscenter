@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-od-4zw_(t$8k)n!(%7r&eh4-ei_t3@_jux*y9ew%t6-nri@fw3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.71', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ciscosportscenter.pythonanywhere.com', 'ciscosportscenter.com', 'www.ciscosportscenter.com']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
