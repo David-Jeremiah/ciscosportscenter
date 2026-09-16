@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}{{ jersey.name }} — Cisco Sport{% endblock %}
+{% block content %}
+
+<section class="product-page">
+    <div class="product-gallery">
+        <div class="product-image" id="mainImage">
+            {% if jersey.image %}
+                <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}" id="mainImageTag">
+            {% else %}
+                <span class="placeholder-number">{{ jersey.team.name|slice:":1" }}</span>
+            {% endif %}
+        </div>
+
+        {% if jersey.images.all %}
+        <div class="gallery-thumbs">
+            {% if jersey.image %}
+            <button type="button" class="thumb-item active" data-full="{{ jersey.image.url }}">
+                <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}">
+            </button>
+            {% endif %}
+            {% for extra in jersey.images.all %}
+            <button type="button" class="thumb-item{% if not jersey.image and forloop.first %} active{% endif %}" data-full="{{ extra.image.url }}">
+                <img src="{{ extra.image.url }}" alt="{{ jersey.name }} view">
+            </button>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="product-info buy-box">
+        <p class="team-tag">{{ jersey.team.name }} &middot; {{ jersey.get_kind_display }} &middot; {{ jersey.season }}</p>
+        <h1>{{ jersey.name }}</h1>
+        <p class="price">UGX {{ jersey.price }}</p>
+
+        {% if jersey.description %}
+            <p class="description">{{ jersey.description }}</p>
+        {% endif %}
+
+        <hr class="seam">
+
+        <form method="post" action="{% url 'store:cart_add' %}" id="addToCartForm">
+            {% csrf_token %}
+            <input type="hidden" name="variant_id" id="variantIdInput" value="">
+
+            <p class="size-label">Select size</p>
+            <div class="sizes" id="sizeOptions">
+                {% for variant in jersey.variants.all %}
+                    <button type="button"
+                            class="size-option"
+                            data-id="{{ variant.id }}"
+                            data-stock="{{ variant.stock }}"
+                            {% if variant.stock <= 0 %}disabled{% endif %}>
+                        {{ variant.size }}
+                    </button>
+                {% empty %}
+                    <span class="size-option" style="cursor:default;">No sizes added yet</span>
+                {% endfor %}
+            </div>
+
+            <p class="size-label">Quantity</p>
+            <div class="qty-stepper">
+                <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                <input type="number" name="quantity" id="qtyInput" value="1" min="1" max="1" readonly>
+                <button type="button" id="qtyPlus" aria-label="Increase quantity">&plus;</button>
+            </div>
+
+            {% if jersey.total_stock > 0 %}
+                <button type="submit" class="btn btn-primary btn-add-cart" id="addToCart" disabled>Select a size</button>
+            {% else %}
+                <button type="button" class="btn btn-primary btn-add-cart" disabled>Out of stock</button>
+            {% endif %}
+        </form>
+
+        <table class="specs-table">
+            <tbody>
+                <tr><th>Team</th><td>{{ jersey.team.name }}</td></tr>
+                <tr><th>Type</th><td>{{ jersey.get_kind_display }}</td></tr>
+                <tr><th>Season</th><td>{{ jersey.season }}</td></tr>
+                <tr><th>Availability</th><td>{% if jersey.total_stock > 0 %}{{ jersey.total_stock }} in stock{% else %}Out of stock{% endif %}</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script>
+(function () {
+    var thumbs = document.querySelectorAll('.thumb-item');
+    var mainImg = document.getElementById('mainImageTag');
+    thumbs.forEach(function (t) {
+        t.addEventListener('click', function () {
+            thumbs.forEach(function (x) { x.classList.remove('active'); });
+            t.classList.add('active');
+            if (mainImg) mainImg.src = t.dataset.full;
+        });
+    });
+
+    var sizeOptions = document.querySelectorAll('.size-option:not([disabled])');
+    var qtyInput = document.getElementById('qtyInput');
+    var qtyMinus = document.getElementById('qtyMinus');
+    var qtyPlus = document.getElementById('qtyPlus');
+    var addToCart = document.getElementById('addToCart');
+    var variantIdInput = document.getElementById('variantIdInput');
+    var selectedStock = 0;
+
+    sizeOptions.forEach(function (opt) {
+        opt.addEventListener('click', function () {
+            sizeOptions.forEach(function (o) { o.classList.remove('selected'); });
+            opt.classList.add('selected');
+            selectedStock = parseInt(opt.dataset.stock, 10) || 0;
+            variantIdInput.value = opt.dataset.id;
+            qtyInput.value = 1;
+            qtyInput.max = selectedStock;
+            if (addToCart) {
+                addToCart.disabled = false;
+                addToCart.textContent = 'Add to cart';
+            }
+        });
+    });
+
+    if (qtyMinus) {
+        qtyMinus.addEventListener('click', function () {
+            var val = parseInt(qtyInput.value, 10) || 1;
+            if (val > 1) qtyInput.value = val - 1;
+        });
+    }
+    if (qtyPlus) {
+        qtyPlus.addEventListener('click', function () {
+            var val = parseInt(qtyInput.value, 10) || 1;
+            if (val < selectedStock) qtyInput.value = val + 1;
+        });
+    }
+})();
+</script>
+
+{% endblock %}

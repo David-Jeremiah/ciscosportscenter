@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Confirm Payment — Cisco Sport{% endblock %}
+{% block content %}
+
+<section class="checkout-success">
+    <h1>Approve the payment on your phone</h1>
+    <p>We've sent a payment request to your phone for order #{{ order.id }}. Enter your mobile money PIN to approve it.</p>
+    <p id="pendingStatus">Waiting for confirmation...</p>
+</section>
+
+<script>
+(function () {
+    var attempts = 0;
+    var maxAttempts = 30;
+
+    function poll() {
+        attempts += 1;
+        fetch("{% url 'store:payment_status' order.id %}")
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                if (data.status === "success") {
+                    window.location.href = "{% url 'store:checkout_success' order.id %}";
+                } else if (data.status === "failed") {
+                    document.getElementById('pendingStatus').textContent = "Payment failed or was cancelled. Please try again.";
+                } else if (attempts < maxAttempts) {
+                    setTimeout(poll, 4000);
+                } else {
+                    document.getElementById('pendingStatus').textContent = "Still waiting — refresh this page to check again.";
+                }
+            });
+    }
+
+    setTimeout(poll, 4000);
+})();
+</script>
+
+{% endblock %}

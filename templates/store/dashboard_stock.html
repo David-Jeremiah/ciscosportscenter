@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Stock · Dashboard{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'store/css/dashboard.css' %}">{% endblock %}
+{% block content %}
+<div class="dash-page">
+  {% include "store/dashboard_nav.html" %}
+  <h1 class="dash-h1">Stock</h1>
+
+  <div class="dash-toolbar-row">
+    <form method="get" class="dash-toolbar">
+      <input type="text" name="q" value="{{ q }}" placeholder="Search jersey or team...">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <button type="button" class="btn btn-primary" onclick="document.getElementById('add-jersey-panel').classList.toggle('open')">
+      + Add jersey
+    </button>
+  </div>
+
+  <div id="add-jersey-panel" class="dash-card dash-add-jersey">
+    <h2>Add a new jersey</h2>
+    <form method="post" enctype="multipart/form-data" class="dash-form-grid">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="add_jersey">
+
+      <label>Team
+        <select name="team_id" required>
+          <option value="">Select team</option>
+          {% for t in teams %}<option value="{{ t.id }}">{{ t.name }}</option>{% endfor %}
+        </select>
+      </label>
+
+      <label>Kind
+        <select name="kind">
+          {% for value, label in kinds %}<option value="{{ value }}">{{ label }}</option>{% endfor %}
+        </select>
+      </label>
+
+      <label>Season
+        <input type="text" name="season" placeholder="e.g. 2025/26">
+      </label>
+
+      <label>Price (UGX)
+        <input type="number" name="price" step="0.01" min="0" required>
+      </label>
+
+      <label class="dash-form-wide">Name (optional — auto-built if left blank)
+        <input type="text" name="name" placeholder="e.g. Liverpool Home 25/26">
+      </label>
+
+      <label class="dash-form-wide">Description
+        <textarea name="description" rows="3"></textarea>
+      </label>
+
+      <label class="dash-form-wide">Image
+        <input type="file" name="image" accept="image/*">
+      </label>
+
+      <div class="dash-form-wide">
+        <button type="submit" class="btn btn-primary">Add jersey</button>
+      </div>
+    </form>
+    <p class="field-help">New jerseys start with all sizes (XS–XXL) at 0 stock — update quantities below once added.</p>
+  </div>
+
+  {% for group in team_groups %}
+  <details class="dash-team-group" open>
+    <summary class="dash-team-summary">{{ group.team_name }}</summary>
+    {% for entry in group.jerseys %}
+    <table class="dash-table dash-stock-table">
+      <tr><th colspan="3">{{ entry.jersey.name }}</th></tr>
+      <tr><th>Size</th><th>Stock</th><th>Update</th></tr>
+      {% for v in entry.variants %}
+      <tr>
+        <td>{{ v.size }}</td>
+        <td class="{% if v.stock <= low_stock_threshold %}dash-low{% endif %}">{{ v.stock }}</td>
+        <td>
+          <form method="post" class="dash-inline-form">
+            {% csrf_token %}
+            <input type="hidden" name="variant_id" value="{{ v.id }}">
+            <input type="number" name="stock" value="{{ v.stock }}" min="0">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endfor %}
+  </details>
+  {% empty %}
+  <p class="dash-empty">No variants match.</p>
+  {% endfor %}
+</div>
+{% endblock %}

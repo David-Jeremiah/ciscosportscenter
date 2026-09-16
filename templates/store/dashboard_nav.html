@@ -1,0 +1,6 @@
+<div class="dash-subnav">
+  <a href="{% url 'store:dashboard_overview' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'dashboard_overview' %}active{% endif %}">Overview</a>
+  <a href="{% url 'store:dashboard_orders' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'dashboard_orders' or request.resolver_match.url_name == 'dashboard_order_detail' %}active{% endif %}">Orders</a>
+  <a href="{% url 'store:dashboard_stock' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'dashboard_stock' %}active{% endif %}">Stock</a>
+  <a href="{% url 'store:dashboard_customers' %}" class="dash-nav-link {% if request.resolver_match.url_name == 'dashboard_customers' %}active{% endif %}">Customers</a>
+</div>

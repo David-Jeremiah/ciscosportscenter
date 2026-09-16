@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Orders · Dashboard{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'store/css/dashboard.css' %}">{% endblock %}
+{% block content %}
+<div class="dash-page">
+  {% include "store/dashboard_nav.html" %}
+  <h1 class="dash-h1">Orders</h1>
+
+  <form method="get" class="dash-toolbar">
+    <input type="text" name="q" value="{{ q }}" placeholder="Search name, phone, email, id...">
+    <select name="status">
+      <option value="">All statuses</option>
+      {% for s in statuses %}<option value="{{ s }}" {% if s == current_status %}selected{% endif %}>{{ s|capfirst }}</option>{% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </form>
+
+  <table class="dash-table">
+    <tr><th>#</th><th>Customer</th><th>Phone</th><th>Status</th><th>Payment</th><th>Total</th><th>Date</th></tr>
+    {% for order in orders %}
+    <tr>
+      <td><a href="{% url 'store:dashboard_order_detail' order.id %}">#{{ order.id }}</a></td>
+      <td>{{ order.full_name }}</td>
+      <td>{{ order.phone }}</td>
+      <td><span class="dash-badge dash-badge-{{ order.status }}">{{ order.status }}</span></td>
+      <td>{{ order.get_payment_method_display }}</td>
+      <td>UGX {{ order.total }}</td>
+      <td>{{ order.created_at|date:"d M Y" }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="7" class="dash-empty">No orders match.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

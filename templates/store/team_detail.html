@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}{{ team.name }} — Cisco Sport{% endblock %}
+{% block content %}
+
+<section class="hero team-hero">
+    <div class="hero-copy">
+        <p class="kicker">{{ team.league }}</p>
+        <h1>{{ team.name }}</h1>
+        <p>{{ jerseys|length }} kit{{ jerseys|length|pluralize }} available.</p>
+        <a class="btn btn-primary" href="{% url 'store:jersey_list' %}">All teams</a>
+    </div>
+    <div class="hero-image">
+        {% if team.logo %}
+            <img src="{{ team.logo.url }}" alt="{{ team.name }}">
+        {% else %}
+            <span class="placeholder-number">{{ team.name|slice:":1" }}</span>
+        {% endif %}
+    </div>
+</section>
+
+<section class="catalog" id="catalog">
+    <div class="catalog-head">
+        <h2>{{ team.name }} jerseys</h2>
+        <span class="catalog-count">{{ jerseys|length }} available</span>
+    </div>
+
+    <form class="filter-bar" method="get">
+        <select name="kind" class="filter-select" onchange="this.form.submit()">
+            <option value="">All types</option>
+            {% for value, label in kinds %}
+                <option value="{{ value }}" {% if selected_kind == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+        <select name="sort" class="filter-select" onchange="this.form.submit()">
+            <option value="newest" {% if selected_sort == "newest" or not selected_sort %}selected{% endif %}>Newest</option>
+            <option value="price_asc" {% if selected_sort == "price_asc" %}selected{% endif %}>Price: low to high</option>
+            <option value="price_desc" {% if selected_sort == "price_desc" %}selected{% endif %}>Price: high to low</option>
+        </select>
+    </form>
+
+    {% if jerseys %}
+    <div class="jersey-grid">
+        {% for jersey in jerseys %}
+        <a class="jersey-card" href="{% url 'store:jersey_detail' jersey.slug %}">
+            <div class="thumb">
+                {% if jersey.image %}
+                    <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}">
+                {% else %}
+                    <span class="no-image">No image yet</span>
+                {% endif %}
+            </div>
+            <div class="info">
+                <p class="team-tag">{{ jersey.get_kind_display }} &middot; {{ jersey.season }}</p>
+                <h3>{{ jersey.name }}</h3>
+                <p class="price">UGX {{ jersey.price }}</p>
+                {% if jersey.total_stock > 0 %}
+                    <p class="stock">{{ jersey.total_stock }} in stock</p>
+                {% else %}
+                    <p class="stock out">Out of stock</p>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">No jerseys match your filters.</div>
+    {% endif %}
+</section>
+
+{% endblock %}

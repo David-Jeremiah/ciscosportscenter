@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Create account — Cisco Sport{% endblock %}
+{% block content %}
+<div class="track-page">
+    <h1>Create account</h1>
+
+    {% if form.non_field_errors %}
+    <div class="form-errors">
+        {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+    </div>
+    {% endif %}
+
+    <form method="post" class="track-form">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+
+        {% for field in form %}
+        <label>
+            {{ field.label }}
+            {{ field }}
+            {% if field.help_text %}
+                <small class="field-help">{{ field.help_text|safe }}</small>
+            {% endif %}
+            {% if field.errors %}
+                <span class="field-error">{{ field.errors|striptags }}</span>
+            {% endif %}
+        </label>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Create account</button>
+    </form>
+
+    <p style="color:var(--chalk-dim); margin-top:16px;">
+        Already have an account? <a href="{% url 'store:account_login' %}" style="color:var(--amber);">Log in</a>
+    </p>
+</div>
+{% endblock %}

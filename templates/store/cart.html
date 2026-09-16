@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Your Cart — Cisco Sport{% endblock %}
+{% block content %}
+
+<section class="cart-page">
+    <h1>Your cart</h1>
+
+    {% if items %}
+    <table class="cart-table">
+        <thead>
+            <tr><th>Item</th><th>Size</th><th>Qty</th><th>Subtotal</th><th></th></tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td class="cart-item-cell" data-label="Item">
+                    <div class="cart-thumb">
+                        {% if item.variant.jersey.image %}
+                            <img src="{{ item.variant.jersey.image.url }}" alt="{{ item.variant.jersey.name }}">
+                        {% endif %}
+                    </div>
+                    <div>
+                        <p class="cart-item-name">{{ item.variant.jersey.name }}</p>
+                        <p class="cart-item-price">UGX {{ item.variant.jersey.price }}</p>
+                    </div>
+                </td>
+                <td data-label="Size">{{ item.variant.size }}</td>
+                <td data-label="Qty">
+                    <form method="post" action="{% url 'store:cart_update' item.variant.id %}" class="qty-stepper qty-stepper-sm">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.variant.stock }}">
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+                <td data-label="Subtotal">UGX {{ item.subtotal }}</td>
+                <td data-label="">
+                    <form method="post" action="{% url 'store:cart_remove' item.variant.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="link-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="cart-summary">
+        <p class="cart-total">Total: <span>UGX {{ total }}</span></p>
+        <a class="btn btn-primary" href="{% url 'store:checkout' %}">Checkout</a>
+    </div>
+    {% else %}
+    <div class="empty-state">Your cart is empty. <a href="{% url 'store:jersey_list' %}">Browse jerseys</a>.</div>
+    {% endif %}
+</section>
+
+{% endblock %}

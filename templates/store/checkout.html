@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Checkout — Cisco Sport{% endblock %}
+{% block content %}
+
+<section class="checkout-page">
+    <form method="post" class="checkout-form">
+        {% csrf_token %}
+        <h1>Delivery details</h1>
+
+        {% if errors %}
+        <div class="form-errors">
+            {% for error in errors %}<p>{{ error }}</p>{% endfor %}
+        </div>
+        {% endif %}
+
+        <label>Full name<input type="text" name="full_name" value="{{ request.POST.full_name|default:initial_full_name }}" required></label>
+        <label>Phone<input type="tel" name="phone" value="{{ request.POST.phone }}" required></label>
+        <label>Email (optional)<input type="email" name="email" value="{{ request.POST.email|default:initial_email }}"></label>
+        <label>Address<input type="text" name="address" value="{{ request.POST.address }}" required></label>
+        <label>City<input type="text" name="city" value="{{ request.POST.city }}"></label>
+
+        <p class="size-label">Payment method</p>
+        <div class="payment-options">
+            <label class="payment-option">
+                <input type="radio" name="payment_method" value="cash_on_delivery" checked onchange="togglePaymentFields()">
+                Cash on Delivery
+            </label>
+            <label class="payment-option">
+                <input type="radio" name="payment_method" value="mtn_momo" onchange="togglePaymentFields()">
+                MTN MoMo
+            </label>
+            <label class="payment-option">
+                <input type="radio" name="payment_method" value="airtel_money" onchange="togglePaymentFields()">
+                Airtel Money
+            </label>
+        </div>
+
+        <div id="momoInstructions" class="payment-notice" style="display:none;">
+            <div class="payment-details-box" style="border:1px solid #ddd; border-radius:8px; padding:14px; margin:10px 0;">
+                <p><strong>Pay to:</strong> <span id="payCode"></span> (<span id="payNetwork"></span>)</p>
+                <p><strong>Account name:</strong> <span id="payAccountName"></span></p>
+                <p><strong>Amount:</strong> UGX {{ total }}</p>
+                <p><strong>How to pay:</strong></p>
+                <ol id="payDialSteps" style="margin:6px 0 0 18px; padding:0;"></ol>
+            </div>
+            <label>Transaction reference<input type="text" name="payment_reference" placeholder="e.g. 1234567890"></label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Place order</button>
+    </form>
+
+    <aside class="order-summary buy-box">
+        <h2>Order summary</h2>
+        {% for item in items %}
+            <p class="summary-line">{{ item.quantity }} × {{ item.variant.jersey.name }} ({{ item.variant.size }}) — UGX {{ item.subtotal }}</p>
+        {% endfor %}
+        <hr class="seam">
+        <p class="cart-total">Total: <span>UGX {{ total }}</span></p>
+    </aside>
+</section>
+
+<script>
+function togglePaymentFields() {
+    var selected = document.querySelector('input[name="payment_method"]:checked').value;
+    var box = document.getElementById('momoInstructions');
+    var stepsList = document.getElementById('payDialSteps');
+
+    if (selected === "mtn_momo") {
+        document.getElementById('payCode').textContent = "{{ mtn_code }}";
+        document.getElementById('payNetwork').textContent = "MTN MoMo";
+        document.getElementById('payAccountName').textContent = "{{ mtn_account_name }}";
+        stepsList.innerHTML =
+            "<li>Dial <strong>*165#</strong></li>" +
+            "<li>Select <strong>Send Money</strong></li>" +
+            "<li>Enter the phone number <strong>{{ mtn_code }}</strong></li>" +
+            "<li>Enter amount <strong>UGX {{ total }}</strong> and confirm with your PIN</li>";
+        box.style.display = 'block';
+    } else if (selected === "airtel_money") {
+        document.getElementById('payCode').textContent = "{{ airtel_code }}";
+        document.getElementById('payNetwork').textContent = "Airtel Money";
+        document.getElementById('payAccountName').textContent = "{{ airtel_account_name }}";
+        stepsList.innerHTML =
+            "<li>Dial <strong>*185#</strong></li>" +
+            "<li>Select <strong>Pay Merchant</strong> (or <strong>Pay Bill</strong>)</li>" +
+            "<li>Enter the merchant/MoMo code <strong>{{ airtel_code }}</strong></li>" +
+            "<li>Enter amount <strong>UGX {{ total }}</strong> and confirm with your PIN</li>";
+        box.style.display = 'block';
+    } else {
+        box.style.display = 'none';
+    }
+}
+</script>
+
+{% endblock %}

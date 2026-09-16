@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Cisco Sports Center{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+</head>
+<body>
+   <header class="site-header">
+    <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <a class="brand" href="{% url 'store:jersey_list' %}">CISCO<span>SPORTS</span>CENTER</a>
+
+    <nav class="mega-nav" id="megaNav">
+        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+        <ul class="mega-nav-list">
+            {% for cat in nav_menu %}
+            <li class="mega-nav-item">
+                <button type="button" class="mega-nav-trigger" aria-expanded="false">
+                    {{ cat.label }}
+                    <span class="chevron mega-trigger-chevron">&rsaquo;</span>
+                </button>
+                <div class="mega-panel">
+                    <div class="nav-screen nav-screen-leagues" data-screen="leagues">
+                        {% for group_name, teams in cat.groups.items %}
+                        <button type="button" class="league-item" data-league-index="{{ forloop.counter0 }}">
+                            {{ group_name }}
+                            <span class="chevron">&rsaquo;</span>
+                        </button>
+                        {% endfor %}
+                    </div>
+                    <div class="nav-screen nav-screen-teams" data-screen="teams" hidden>
+                        <button type="button" class="team-back">&lsaquo; All leagues</button>
+                        {% for group_name, teams in cat.groups.items %}
+                        <div class="team-group" data-league-index="{{ forloop.counter0 }}" hidden>
+                            <p class="mega-col-title">{{ group_name }}</p>
+                            <ul class="mega-col-list">
+                                {% for team in teams %}
+                                <li><a href="{% url 'store:team_detail' team.slug %}">{{ team.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="mobile-nav-actions">
+            <a href="{% url 'store:order_track' %}">Track order</a>
+        </div>
+    </nav>
+
+    <form class="search-form" action="{% url 'store:jersey_list' %}" method="get">
+        <input type="text" name="q" placeholder="Search jerseys, teams..." value="{{ request.GET.q }}">
+    </form>
+
+    <div class="nav-actions">
+    {% if user.is_authenticated %}
+        <a href="{% url 'store:account_logout' %}" class="account-link">Logout</a>
+    {% else %}
+        <a href="{% url 'store:account_login' %}" class="account-link">Account</a>
+    {% endif %}
+    <a href="{% url 'store:order_track' %}" class="track-link">Track order</a>
+    <a href="{% url 'store:cart_view' %}" class="cart-link">
+        Cart{% if cart_count %} <span class="cart-badge">{{ cart_count }}</span>{% endif %}
+    </a>
+</div>
+</header>
+
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+        <span>&copy; {% now "Y" %} Cisco Sport</span>
+        <span>Kampala, Uganda</span>
+    </footer>
+
+    <script src="{% static 'store/js/nav.js' %}"></script>
+</body>
+</html>

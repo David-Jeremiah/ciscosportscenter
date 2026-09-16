@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Customers · Dashboard{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'store/css/dashboard.css' %}">{% endblock %}
+{% block content %}
+<div class="dash-page">
+  {% include "store/dashboard_nav.html" %}
+  <h1 class="dash-h1">Customers</h1>
+
+  <form method="get" class="dash-toolbar">
+    <input type="text" name="q" value="{{ q }}" placeholder="Search username or email...">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <table class="dash-table">
+    <tr><th>Username</th><th>Email</th><th>Orders</th><th>Total spent</th><th>Joined</th></tr>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.user.username }}</td>
+      <td>{{ row.user.email }}</td>
+      <td>{{ row.order_count }}</td>
+      <td>UGX {{ row.total_spent }}</td>
+      <td>{{ row.user.date_joined|date:"d M Y" }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5" class="dash-empty">No customers match.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

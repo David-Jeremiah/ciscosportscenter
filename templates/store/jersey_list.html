@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Cisco Sport — Match Jerseys{% endblock %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero-copy">
+        <p class="kicker">New kits in stock</p>
+        <h1>Wear the match day.</h1>
+        <p>Authentic team jerseys, sized true and shipped fast across Kampala and beyond. Home, away, and retro kits for the teams you follow.</p>
+        <a class="btn btn-primary" href="#catalog">Shop jerseys</a>
+    </div>
+
+    <div class="hero-image" id="heroImage">
+        {% for jersey in featured_jerseys %}
+            <img src="{{ jersey.image.url }}"
+                 alt="{{ jersey.name }}"
+                 class="hero-slide{% if forloop.first %} active{% endif %}">
+        {% empty %}
+            <span class="placeholder-number">9</span>
+        {% endfor %}
+
+        {% if featured_jerseys|length > 1 %}
+        <div class="hero-dots">
+            {% for jersey in featured_jerseys %}
+                <span class="hero-dot{% if forloop.first %} active{% endif %}"></span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+
+<section class="catalog" id="catalog">
+    <div class="catalog-head">
+        <h2>{% if query %}Results for "{{ query }}"{% else %}All jerseys{% endif %}</h2>
+        <span class="catalog-count">{{ jerseys|length }} available</span>
+    </div>
+
+    <form class="filter-bar" method="get">
+    {% if query %}<input type="hidden" name="q" value="{{ query }}">{% endif %}
+
+    <div class="filter-group">
+        <a href="?{% if query %}q={{ query }}&{% endif %}" class="filter-pill{% if not selected_team %} active{% endif %}">All teams</a>
+    </div>
+
+    <select name="kind" class="filter-select" onchange="this.form.submit()">
+        <option value="">All types</option>
+        {% for value, label in kinds %}
+            <option value="{{ value }}" {% if selected_kind == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="sort" class="filter-select" onchange="this.form.submit()">
+        <option value="newest" {% if selected_sort == "newest" or not selected_sort %}selected{% endif %}>Newest</option>
+        <option value="price_asc" {% if selected_sort == "price_asc" %}selected{% endif %}>Price: low to high</option>
+        <option value="price_desc" {% if selected_sort == "price_desc" %}selected{% endif %}>Price: high to low</option>
+    </select>
+</form>
+
+    {% if jerseys %}
+    <div class="jersey-grid">
+        {% for jersey in jerseys %}
+        <a class="jersey-card" href="{% url 'store:jersey_detail' jersey.slug %}">
+            <div class="thumb">
+                {% if jersey.image %}
+                    <img src="{{ jersey.image.url }}" alt="{{ jersey.name }}">
+                {% else %}
+                    <span class="no-image">No image yet</span>
+                {% endif %}
+            </div>
+            <div class="info">
+                <p class="team-tag">{{ jersey.team.name }} &middot; {{ jersey.get_kind_display }}</p>
+                <h3>{{ jersey.name }}</h3>
+                <p class="price">UGX {{ jersey.price }}</p>
+                {% if jersey.total_stock > 0 %}
+                    <p class="stock">{{ jersey.total_stock }} in stock</p>
+                {% else %}
+                    <p class="stock out">Out of stock</p>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">No jerseys match your filters.</div>
+    {% endif %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Dashboard · Cisco Sports Center{% endblock %}
+
+{% block content %}
+<div class="dash-page">
+  {% include "store/dashboard_nav.html" %}
+  <h1 class="dash-h1">Overview</h1>
+
+  <div class="dash-stats">
+    <div class="dash-stat"><div class="dash-stat-label">Total orders</div><div class="dash-stat-value">{{ total_orders }}</div></div>
+    <div class="dash-stat"><div class="dash-stat-label">Revenue (paid+)</div><div class="dash-stat-value">UGX {{ revenue }}</div></div>
+    <div class="dash-stat"><div class="dash-stat-label">Customers</div><div class="dash-stat-value">{{ customer_count }}</div></div>
+    <div class="dash-stat"><div class="dash-stat-label">Low stock</div><div class="dash-stat-value {% if low_stock_count > 0 %}warn{% endif %}">{{ low_stock_count }}</div></div>
+  </div>
+
+  <div class="dash-grid-2">
+    <div class="dash-card">
+      <h2>Orders by status</h2>
+      <table class="dash-table">
+        {% for status, count in status_counts.items %}
+        <tr><td class="dash-badge dash-badge-{{ status }}">{{ status }}</td><td>{{ count }}</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="dash-card">
+      <h2>Low stock</h2>
+      {% if low_stock %}
+        <table class="dash-table">
+          {% for v in low_stock %}
+          <tr><td>{{ v.jersey.name }} · {{ v.size }}</td><td class="dash-low">{{ v.stock }}</td></tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p class="dash-empty">Nothing low right now.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="dash-card">
+    <h2>Recent orders</h2>
+    <table class="dash-table">
+      <tr><th>#</th><th>Customer</th><th>Status</th><th>Total</th><th>Date</th></tr>
+      {% for order in recent_orders %}
+      <tr>
+        <td><a href="{% url 'store:dashboard_order_detail' order.id %}">#{{ order.id }}</a></td>
+        <td>{{ order.full_name }}</td>
+        <td><span class="dash-badge dash-badge-{{ order.status }}">{{ order.status }}</span></td>
+        <td>UGX {{ order.total }}</td>
+        <td>{{ order.created_at|date:"d M Y" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5" class="dash-empty">No orders yet.</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

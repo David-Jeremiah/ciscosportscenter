@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Order #{{ order.id }} · Dashboard{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'store/css/dashboard.css' %}">{% endblock %}
+{% block content %}
+<div class="dash-page">
+  {% include "store/dashboard_nav.html" %}
+  <a href="{% url 'store:dashboard_orders' %}" class="dash-nav-link">← Back to orders</a>
+  <h1 class="dash-h1">Order #{{ order.id }}</h1>
+
+  <div class="dash-grid-2">
+    <div class="dash-card" style="grid-column: 1 / -1;">
+      <h2>Items</h2>
+      <table class="dash-table">
+        <tr><th>Jersey</th><th>Size</th><th>Qty</th><th>Unit price</th></tr>
+        {% for item in items %}
+        <tr><td>{{ item.variant.jersey.name }}</td><td>{{ item.variant.size }}</td><td>{{ item.quantity }}</td><td>UGX {{ item.unit_price }}</td></tr>
+        {% endfor %}
+      </table>
+      <p style="text-align:right; font-weight:700; margin-top:12px;">Total: UGX {{ order.total }}</p>
+    </div>
+
+    <div class="dash-card">
+      <h2>Customer</h2>
+      <p>{{ order.full_name }} {% if order.customer %}(registered){% else %}(guest){% endif %}<br>
+      {{ order.phone }}<br>{{ order.email }}<br>{{ order.address }}{% if order.city %}, {{ order.city }}{% endif %}</p>
+    </div>
+
+    <div class="dash-card">
+      <h2>Payment</h2>
+      <p>Method: {{ order.get_payment_method_display }}</p>
+      {% if payment %}
+        <p>Provider: {{ payment.provider }}<br>Reference: {{ payment.reference }}<br>Amount: UGX {{ payment.amount }}<br>Status: {{ payment.status }}</p>
+      {% else %}
+        <p class="dash-empty">No separate payment record.</p>
+      {% endif %}
+    </div>
+
+    <div class="dash-card">
+      <h2>Update status</h2>
+      <form method="post" class="dash-inline-form">
+        {% csrf_token %}
+        <select name="status">
+          {% for s in statuses %}<option value="{{ s }}" {% if s == order.status %}selected{% endif %}>{{ s|capfirst }}</option>{% endfor %}
+        </select>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
